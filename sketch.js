@@ -1,24 +1,31 @@
+
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    fill("black");
-    rect(0, 0, width, height);
 }
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-  
-  
-    background(250,200,30);
+    function mousePressed(){
+      background(random(mouseX),random(255),random(255))
+    }
+    //background(250,200,30);
+    
+    function draw (){
+   /* let o=mouseX
+    let p=mouseY
+    console.log(o,p)*/
+
       fill(20,180,200)
-      triangle(420,0,580,0,500,300);
+      triangle(420,0,580,0,500,300 );
     x=500,y=300 ;
     noFill()
       triangle(350,0,650,0,500,300);
       
       fill(204,255,255)
       rect(450,200,100,200);
+    
       
     fill("red");
-      quad(x-10,y,x,y+10,x+10,y,x,y-10);
+    q=10 + 40 * tan(frameCount / 100)
+      quad(x-q,y,x,y+q,x+q,y,x,y-q);
       
     fill(102,51,0);
       rect(450,350,100,50);
@@ -59,3 +66,5 @@ function setup() {
     quad (x+A,y+A*2, x+A,y-A*3/4, x+(A-B),y-(A-B)*3/4, x+(A-B),y+(A-B)*2);
     
   }
+  
+    
